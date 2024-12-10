@@ -1,6 +1,3 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
 
@@ -17,9 +14,9 @@ class ShopPage:
 
 
     def add_products(self):
-        self.driver.find_element(By.ID, "add-to-card-sauce-labs-backpack").click()
-        self.driver.find_element(By.ID, "add-to-card-sauce-labs-bolt-t-shirt").click()
-        self.driver.find_element(By.ID, "add-to-card-sauce-labs-onesie").click()
+        self.driver.find_element(By.CSS_SELECTOR, '#add-to-cart-sauce-labs-backpack').click()
+        self.driver.find_element(By.CSS_SELECTOR, '#add-to-cart-sauce-labs-bolt-t-shirt').click()
+        self.driver.find_element(By.CSS_SELECTOR, '#add-to-cart-sauce-labs-onesie').click()
 
 
     def shopping_cart(self):
